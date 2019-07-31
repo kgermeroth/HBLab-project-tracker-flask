@@ -17,6 +17,19 @@ def get_student():
 
     return render_template("student_info.html", first=first, last=last, github=github)
 
+@app.route("/student-search")
+def get_student_form():
+    """Show form for searching a student"""
+    return render_template("student_search.html")
+
+@app.route("/student-add", methods=['POST'])
+def add_new_student():
+    """Adds a new student to the student database"""
+
+    first_name = session.form['first_name']
+    last_name = session.form['last_name']
+    github = session.form['github']
+    
 if __name__ == "__main__":
     hackbright.connect_to_db(app)
     app.run(debug=True)
