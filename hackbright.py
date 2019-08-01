@@ -144,8 +144,8 @@ def get_grades_by_title(title):
 
     rows = db_cursor.fetchall()
 
-    for row in rows:
-        print(f"Student {row[0]} received grade of {row[1]} for {title}")
+    # for row in rows:
+    #     print(f"Student {row[0]} received grade of {row[1]} for {title}")
 
     return rows
 

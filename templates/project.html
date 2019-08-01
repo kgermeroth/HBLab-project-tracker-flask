@@ -10,5 +10,14 @@
          <li>Description: {{ project[1] }}</li>
           <li>Max Grade: {{ project[2] }}</li>
     </ul>
+
+    <h2>Students who have completed {{ project[0] }}:</h2>
+    <ul>
+    {% for github, grade in student_grades %}
+
+    <li>{{ github }} : {{ grade }}</li>
+
+    {% endfor %}
+    </ul>
 </body>
 </html>

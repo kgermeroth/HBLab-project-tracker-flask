@@ -55,8 +55,9 @@ def project_info(title):
     """Lists project information"""
 
     project = hackbright.get_project_by_title(title)
+    student_grades= hackbright.get_grades_by_title(title)
 
-    return render_template("project.html", project=project)
+    return render_template("project.html", project=project, student_grades=student_grades)
 
 
 if __name__ == "__main__":  
