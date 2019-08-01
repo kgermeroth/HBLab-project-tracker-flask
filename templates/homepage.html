@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome!</title>
+</head>
+<body>
+    <h1>Students</h1>
+        <ul>
+            {% for github in githubs %}
+            <li><a href="/student/{{ github }}">{{ github }}</a></li>
+            {% endfor %}
+        </ul>
+    <h1>Projects</h1>
+        <ul>
+            {% for title in projects %}
+            <li><a href="/project/{{ title }}">{{ title }}</a></li>
+            {% endfor %}
+        </ul>
+</body>
+</html>

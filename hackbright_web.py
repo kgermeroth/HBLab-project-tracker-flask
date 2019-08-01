@@ -7,12 +7,20 @@ import hackbright
 app = Flask(__name__)
 app.secret_key = "ssssshhhhsecret"
 
+@app.route("/")
+def show_students_projects():
+    """Shows a list of students and list of projects"""
 
-@app.route("/student")
-def get_student():
+    githubs = hackbright.get_students()
+    projects = hackbright.get_projects()
+
+    return render_template("homepage.html",
+                            githubs=githubs,
+                            projects=projects)
+
+@app.route("/student/<github>")
+def get_student(github):
     """Show information about a student."""
-
-    github = request.args.get('github')
 
     first, last, github = hackbright.get_student_by_github(github)
 
