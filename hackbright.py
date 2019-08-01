@@ -33,7 +33,7 @@ def get_student_by_github(github):
 
     row = db_cursor.fetchone()
 
-    print(f"Student: {row[0]} {row[1]}\nGitHub account: {row[2]}")
+    #print(f"Student: {row[0]} {row[1]}\nGitHub account: {row[2]}")
 
     return row
 
@@ -71,7 +71,7 @@ def get_project_by_title(title):
 
     row = db_cursor.fetchone()
 
-    print(f"Title: {row[0]}\nDescription: {row[1]}\nMax Grade: {row[2]}")
+    # print(f"Title: {row[0]}\nDescription: {row[1]}\nMax Grade: {row[2]}")
 
     return row
 
